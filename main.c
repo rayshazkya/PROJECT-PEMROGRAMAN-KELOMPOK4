@@ -14,8 +14,7 @@ int main () {
     switch (pick) {
         case 'a':
             Login_Admin (  username ,   password );
-            break;
-
+           
         case  'u':
             Login_user(  username  ,   password);
             break;
