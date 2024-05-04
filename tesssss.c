@@ -1,19 +1,17 @@
-#include <stdio.h>
-
-#define MAX_CHARACTERS 100
+#include "header.h"
 
 typedef struct {
     unsigned int id_buku;
-    char judul[MAX_CHARACTERS];
-    char penulis[MAX_CHARACTERS];
-    char penerbit[MAX_CHARACTERS];
+    char judul[n];
+    char penulis[n];
+    char penerbit[n];
     unsigned int jumlah_halaman;
     unsigned int tahun_terbit;
     unsigned int jumlah_buku_tersedia;
 } daftar_buku;
 
 void admin_Akses_buku() {
-    FILE *buku_akses = fopen("daftarbuku.txt", "a+"); // Open file in append mode
+    FILE *buku_akses = fopen("daftarbuku.txt", "a+"); 
     if (buku_akses == NULL) {
         printf("Error opening file.\n");
         return;
@@ -52,9 +50,4 @@ void admin_Akses_buku() {
     }
 
     fclose(buku_akses);
-}
-
-int main() {
-    admin_Akses_buku();
-    return 0;
 }
