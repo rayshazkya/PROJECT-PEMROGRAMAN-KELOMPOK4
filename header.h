@@ -11,3 +11,5 @@ void kembali_main_admin(char back);
 void kembali_main_user(char back);
 void showlistPeminjaman();
 int bacaDataBuku(Buku *daftar_buku);
+void pinjamBuku(buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id);
+void kembalikanBuku(unsigned int id);
