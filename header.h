@@ -9,3 +9,5 @@ void main_menu_admin ();
 void main_menu_user();
 void kembali_main_admin(char back);
 void kembali_main_user(char back);
+void showlistPeminjaman();
+int bacaDataBuku(Buku *daftar_buku);
