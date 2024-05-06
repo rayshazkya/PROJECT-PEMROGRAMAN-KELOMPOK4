@@ -13,3 +13,8 @@ void showlistPeminjaman();
 int bacaDataBuku(Buku *daftar_buku);
 void pinjamBuku(buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id);
 void kembalikanBuku(unsigned int id);
+int tampilkanMenu();
+void tambahBuku(struct Buku bukuArray[], int *jumlahBuku);
+void hapusBuku(struct Buku bukuArray[], int *jumlahBuku, int id);
+void editBuku(struct Buku bukuArray[], int *jumlahBuku, int id);
+void simpanKeFile(struct Buku bukuArray[], int jumlahBuku);
