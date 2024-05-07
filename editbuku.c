@@ -3,7 +3,7 @@
 #include <string.h>
 #include "header.h"
 
-// Fungsi untuk mengedit data buku berdasarkan ID
+// Fungsi mengedit data buku berdasarkan ID
 void editBuku(struct Buku buku[], int *jumlahBuku, int id) {
     int i, found = 0;
     // Mencari buku dengan ID yang sesuai
@@ -13,8 +13,9 @@ void editBuku(struct Buku buku[], int *jumlahBuku, int id) {
             break;
         }
     }
-    if (found) { // Jika buku ditemukan
-        // Meminta pengguna untuk memasukkan data baru
+    // jika buku ditemukan 
+    if (found) {
+        // Meminta user untuk memasukkan data baru
         printf("Masukkan judul baru: ");
         scanf("%s", buku[i].judul);
         printf("Masukkan penulis baru: ");
