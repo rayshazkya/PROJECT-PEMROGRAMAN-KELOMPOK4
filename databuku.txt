@@ -41,6 +41,6 @@
 2013 "Aljabar" "Michael Artin" "Yayasan Pustaka Obor Indonesia" 626 2015 30
 2014 "Kamus Besar Bahasa Indonesia" "Pusat Bahasa" "Balai Pustaka" 1720 2016 35
 2016 "Sejarah Peradaban Islam" "Husain M. Noer" "Pustaka Al-Husna" 400 2011 19
-4029 "Pemrograman Web" "Achmad Solichin" "Penerbit Andi" 700 2015 30
-4030 "Cloud Computing" "Dan C. Marinescu" "Erlangga" 600 2014 28
+2017 "Pemrograman Web" "Achmad Solichin" "Penerbit Andi" 700 2015 30
+2018 "Cloud Computing" "Dan C. Marinescu" "Erlangga" 600 2014 28
 
