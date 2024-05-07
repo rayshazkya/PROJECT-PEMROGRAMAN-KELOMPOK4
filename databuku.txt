@@ -1,0 +1,5 @@
+1001 "100 Tokoh Besar yang Membentuk Sejarah Dunia" "Eddy Soetrisno" "PT. Nusantara" 282 2008 18
+1002 "Laskar Mawar" "Barbara Victor" "Mizan" 400 2005 25
+1003 "travelicious" "Lalu Abdul Fatah" "B-First" 169 2011 15
+1004 "Muslim Tionghoa Cheng Ho" "Prof. Kong Yuanzhi" "Pustaka Populer Obor" 300 2007 43
+1005 "Kamus Hubungan Internasional" "Khasan Ashari" "Nuansa Cendekia" 483 2021 11

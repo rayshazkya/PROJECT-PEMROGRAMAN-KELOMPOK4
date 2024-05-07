@@ -2,26 +2,36 @@
 #include <stdlib.h>
 #include <string.h>
 
-
-typedef struct buku {
+// Definisi struktur untuk menyimpan data buku
+typedef struct {
     unsigned int id;
-    char judul[100]; 
+    char judul[100];
     char penulis[100];
     char penerbit[100];
-    unsigned int halaman;
+    unsigned int jumlah_halaman;
     unsigned int tahun_terbit;
-    unsigned int jumlah_bukutersedia;
-} buku;
+    unsigned int jumlah_buku_tersedia;
+} Buku;
 
-void main_menu_admin ();
-char Login_user (  char username [] ,  char password[] );
-char Login_Admin (  char username [] ,  char password[] );
-void main_menu_admin ();
-void main_menu_user();
-void kembali_main_admin(char back);
-void kembali_main_user(char back);
-void showBukuTersedia();
-void pinjamBuku();
-void showListPeminjaman();
-void kembalikanBuku();
+// Definisi struktur untuk menyimpan data peminjaman buku
+typedef struct {
+    int id_user;
+    unsigned int id_buku;
+    char judul[100];
+} BukuDipinjam;
+
+// Fungsi untuk meminjam buku
+void pinjamBuku(Buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id);
+
+// Fungsi untuk mengembalikan buku
+void kembalikanBuku(unsigned int id_buku);
+
+// Fungsi untuk menampilkan daftar buku yang tersedia
+void showBukuTersedia(Buku *daftar_buku, int jumlah_buku);
+
+// Fungsi untuk menampilkan daftar peminjaman buku
+void showlistPeminjaman();
+
+// Fungsi untuk membaca data buku dari file
 int bacaDataBuku(Buku *daftar_buku);
+
