@@ -22,38 +22,18 @@ typedef struct {
     char judul[100];
 } BukuDipinjam;
 
-// Fungsi untuk membaca data buku dari file
-int bacaDataBuku(Buku *daftar_buku) {
-    FILE *file = fopen("databuku.txt", "r");
-    if (file == NULL) {
-        printf("Gagal membuka file databuku.txt\n");
-        exit(1);
-    }
-
-    int jumlah_buku = 0;
-    while (fscanf(file, "%u \"%99[^\"]\" \"%99[^\"]\" \"%99[^\"]\" %u %u %u\n", 
-                    &daftar_buku[jumlah_buku].id, 
-                    daftar_buku[jumlah_buku].judul, 
-                    daftar_buku[jumlah_buku].penulis, 
-                    daftar_buku[jumlah_buku].penerbit, 
-                    &daftar_buku[jumlah_buku].jumlah_halaman, 
-                    &daftar_buku[jumlah_buku].tahun_terbit, 
-                    &daftar_buku[jumlah_buku].jumlah_buku_tersedia) == 7) {
-        jumlah_buku++;
-    }
-    fclose(file);
-    return jumlah_buku;
-}
+// Prototipe fungsi bacaDataBuku
+int bacaDataBuku();
 
 // Fungsi untuk meminjam buku
 void pinjamBuku() {
     Buku daftar_buku[MAX_BOOKS];
-    int jumlah_buku = bacaDataBuku(daftar_buku);
+    int jumlah_buku = bacaDataBuku();
 
     int id_user;
     unsigned int id_buku;
 
-    printf("\nMasukkan ID User: ");
+    printf("Masukkan ID User: ");
     scanf("%d", &id_user);
 
     printf("Masukkan ID Buku yang ingin dipinjam: ");
@@ -99,21 +79,29 @@ void pinjamBuku() {
 
 // Fungsi untuk menampilkan daftar buku yang tersedia
 void showBukuTersedia() {
-    Buku daftar_buku[MAX_BOOKS];
-    int jumlah_buku = bacaDataBuku(daftar_buku);
+    FILE *baca = fopen("databuku.txt", "r");
+    Buku Buku[MAX_BOOKS];
+    int count = 0;
 
-    printf("Buku yang tersedia:\n");
-    printf("ID Buku\tJudul\tPenulis\tPenerbit\tJumlah Halaman\tTahun Terbit\tJumlah Tersedia\n");
-    for (int i = 0; i < jumlah_buku; i++) {
-        printf("%u\t%s\t%s\t%s\t%u\t%u\t%u\n", 
-                daftar_buku[i].id, 
-                daftar_buku[i].judul, 
-                daftar_buku[i].penulis, 
-                daftar_buku[i].penerbit, 
-                daftar_buku[i].jumlah_halaman, 
-                daftar_buku[i].tahun_terbit, 
-                daftar_buku[i].jumlah_buku_tersedia);
+    if (baca == NULL) {
+        perror("Error opening file");
+        return;
     }
+   
+    int w =0;
+    while (fscanf(baca, "%u \"%99[^\"]\" \"%99[^\"]\" \"%99[^\"]\" %u %u %u", &Buku[count].id, Buku[count].judul, Buku[count].penulis, Buku[count].penerbit, &Buku[count].jumlah_halaman, &Buku[count].tahun_terbit, &Buku[count].jumlah_buku_tersedia) == 7 && count < sizeof(Buku)) {
+    printf("\n**DATA BUKU ke -%d**\n", w+1);
+    printf("id : %u\n", Buku->id);
+    printf("Judul: %s\n", Buku->judul);
+    printf("Pengarang: %s\n", Buku->penulis);
+    printf("Jumlah Halaman: %u\n", Buku->jumlah_halaman);
+    printf("Penerbit: %s\n", Buku->penerbit);
+    printf("Tahun Terbit: %u\n", Buku->tahun_terbit);
+    printf("Jumlah buku yang tersedia: %u\n", Buku->jumlah_buku_tersedia);
+    w++;
+    }
+
+    fclose(baca);
 }
 
 // Fungsi untuk menampilkan daftar peminjaman buku
@@ -140,7 +128,7 @@ void showListPeminjaman() {
 void kembalikanBuku() {
     unsigned int id_buku;
 
-    printf("\nMasukkan ID Buku yang ingin dikembalikan: ");
+    printf("Masukkan ID Buku yang ingin dikembalikan: ");
     scanf("%u", &id_buku);
 
     FILE *fileInput = fopen("listpeminjaman.txt", "r");
@@ -175,6 +163,30 @@ void kembalikanBuku() {
     if (!bukuDitemukan) {
         printf("Buku dengan ID %u tidak ditemukan dalam daftar peminjaman.\n", id_buku);
     }
+}
+
+// Fungsi untuk membaca data buku dari file
+int bacaDataBuku() {
+    FILE *file = fopen("databuku.txt", "r");
+    if (file == NULL) {
+        printf("Gagal membuka file databuku.txt\n");
+        exit(1);
+    }
+
+    Buku daftar_buku[MAX_BOOKS];
+    int jumlah_buku = 0;
+    while (fscanf(file, "%u \"%99[^\"]\" \"%99[^\"]\" \"%99[^\"]\" %u %u %u\n", 
+                    &daftar_buku[jumlah_buku].id, 
+                    daftar_buku[jumlah_buku].judul, 
+                    daftar_buku[jumlah_buku].penulis, 
+                    daftar_buku[jumlah_buku].penerbit, 
+                    &daftar_buku[jumlah_buku].jumlah_halaman, 
+                    &daftar_buku[jumlah_buku].tahun_terbit, 
+                    &daftar_buku[jumlah_buku].jumlah_buku_tersedia) == 7) {
+        jumlah_buku++;
+    }
+    fclose(file);
+    return jumlah_buku;
 }
 
 int main() {
