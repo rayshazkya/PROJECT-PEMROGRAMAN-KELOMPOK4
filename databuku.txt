@@ -1,5 +1,119 @@
-1001 "100 Tokoh Besar yang Membentuk Sejarah Dunia" "Eddy Soetrisno" "PT. Nusantara" 282 2008 18
-1002 "Laskar Mawar" "Barbara Victor" "Mizan" 400 2005 25
-1003 "travelicious" "Lalu Abdul Fatah" "B-First" 169 2011 15
-1004 "Muslim Tionghoa Cheng Ho" "Prof. Kong Yuanzhi" "Pustaka Populer Obor" 300 2007 43
-1005 "Kamus Hubungan Internasional" "Khasan Ashari" "Nuansa Cendekia" 483 2021 11
+1001 "Laskar Pelangi" "Andrea Hirata" "Bentang Pustaka" 368 2005 15
+1002 "Bumi Manusia" "Pramoedya Ananta Toer" "Hasta Mitra" 536 1980 20
+1003 "Ayat-Ayat Cinta" "Habiburrahman El Shirazy" "Republika" 342 2004 18
+1004 "Perahu Kertas" "Dee Lestari" "Bentang Pustaka" 328 2009 12
+1005 "Negeri 5 Menara" "Ahmad Fuadi" "Gramedia Pustaka Utama" 424 2009 16
+1006 "5 cm" "Donny Dhirgantoro" "Grasindo" 434 2008 14
+1007 "Sang Pemimpi" "Andrea Hirata" "Bentang Pustaka" 368 2006 17
+1008 "Aku" "Sjuman Djaya" "PT. Hasta Mitra" 392 1978 10
+1009 "Ketika Cinta Bertasbih" "Habiburrahman El Shirazy" "Republika" 332 2006 20
+1010 "Matahari" "Tere Liye" "Republika" 458 2011 15
+1011 "Ronggeng Dukuh Paruk" "Ahmad Tohari" "Gramedia Pustaka Utama" 456 1982 19
+1012 "Bidadari-Bidadari Surga" "Tere Liye" "Republika" 392 2005 13
+1013 "Merantau ke Deli" "R.M. Tirto Adhi Soerjo" "Kepustakaan Populer Gramedia" 180 1920 25
+1014 "Hujan Bulan Juni" "Sapardi Djoko Damono" "Balai Pustaka" 96 1964 30
+1015 "Dilan: Dia adalah Dilanku Tahun 1990" "Pidi Baiq" "Dar! Mizan" 318 2014 22
+1016 "Anak Bajang Menggiring Angin" "Sindhunata" "Penerbit Mandala" 500 1995 18
+1017 "Rindu" "Tere Liye" "Republika" 344 2013 16
+1018 "Pulang" "Tere Liye" "Republika" 448 2016 14
+1019 "Pergi" "Tere Liye" "Republika" 416 2017 20
+1020 "Jalan Tak Ada Ujung" "Mochtar Lubis" "Pustaka Jaya" 400 1982 12
+1021 "Bidadari dari Daerah Bekas" "Winda Pratiwi" "Grasindo" 352 2012 18
+1022 "Senja di Jakarta" "Mochtar Lubis" "Pustaka Jaya" 312 1963 16
+1023 "Negeri Van Oranje" "Hamka" "PT. Bulan Bintang" 240 1946 23
+1024 "Dewi Laut" "Hamka" "PT. Bulan Bintang" 233 1942 17
+1025 "Belenggu" "Armijn Pane" "Pustaka Jaya" 200 1940 15
+1026 "Tentang Rasa" "H.B. Jassin" "Balai Pustaka" 220 1961 11
+1027 "Bumi Cinta" "Habiburrahman El Shirazy" "Republika" 408 2005 14
+1028 "Lelaki Harimau" "Eka Kurniawan" "Bentang Pustaka" 480 2004 21
+2001 "Sapiens: Sejarah Singkat Umat Manusia" "Yuval Noah Harari" "Gramedia Pustaka Utama" 512 2011 25
+2002 "Fakta Unik Dunia" "Joko Susanto" "Elex Media Komputindo" 256 2015 30
+2003 "Bumi Manusia" "Pramoedya Ananta Toer" "Hasta Mitra" 536 1980 20
+2004 "Anak Singkong" "Chairul Tanjung" "Gramedia Pustaka Utama" 320 2012 18
+2005 "Ilmu Pengetahuan Alam" "M.G. Husain" "PT Pustaka Binaman Pressindo" 352 2019 22
+2006 "Sejarah Indonesia" "M.C. Ricklefs" "Penerbit Erlangga" 792 1981 15
+2007 "Pendekar Pedang Ular Putih" "Kho Ping Hoo" "Gema Insani Press" 320 1984 20
+2008 "Revolutie van Soekarno" "Jozef Helsen" "Bintang Mas" 260 2002 12
+2009 "Nabi Muhammad: Kisah Hidupnya" "Muhammad Husain Haekal" "Gema Insani Press" 608 2002 18
+2010 "Pencerahan" "Anthony De Mello" "Gloria Books" 250 1987 17
+2011 "Geografi Indonesia" "Muhammad Sadli" "Ghalia Indonesia" 400 2008 20
+2012 "Atlas Dunia" "National Geographic" "Gramedia Pustaka Utama" 416 2014 25
+2013 "Aljabar" "Michael Artin" "Yayasan Pustaka Obor Indonesia" 626 2015 30
+2014 "Kamus Besar Bahasa Indonesia" "Pusat Bahasa" "Balai Pustaka" 1720 2016 35
+2015 "Politik Hukum Indonesia" "Jimly Asshiddiqie" "Penerbit Buku Kompas" 448 2005 22
+2016 "Sejarah Peradaban Islam" "Husain M. Noer" "Pustaka Al-Husna" 400 2011 19
+2017 "Ekonomi Pembangunan" "Kamaluddin Abdullah" "Raja Grafindo Persada" 512 2009 21
+2018 "Biologi Sel" "Bruce Alberts" "Erlangga" 181 1994 18
+2019 "Sejarah Perang Dunia II" "Winston Churchill" "Gramedia Pustaka Utama" 926 1959 15
+2020 "Fisika Modern" "Arthur Beiser" "Erlangga" 596 2003 20
+2021 "Teknologi Informasi" "Soedarto" "Andi Publisher" 520 2010 25
+2022 "Kosmologi" "Stephen Hawking" "Yayasan Obor Indonesia" 212 2001 17
+2023 "Astronomi Dasar" "Galileo Galilei" "Pustaka Jaya" 240 2007 22
+2024 "Ilmu Pengetahuan Alam" "Soerjono Soekanto" "Rajawali Pers" 320 1988 18
+2025 "Sejarah Indonesia Modern" "Rosi Braidotti" "Yayasan Obor Indonesia" 600 2017 23
+2026 "Filsafat Ilmu" "Karl Popper" "Gramedia Pustaka Utama" 424 1989 20
+2027 "Peradaban Mesir Kuno" "Albert Champdor" "Gramedia Pustaka Utama" 448 2013 22
+2028 "Morfologi Tumbuhan" "I.A. Wicaksono" "PT Pustaka Binaman Pressindo" 256 2011 16
+2029 "Pemerintahan Indonesia" "Mulyana W. Kusumah" "PT Remaja Rosdakarya" 428 2006 20
+2030 "Anatomi Fisiologi" "Marieb" "PT Penerbit Erlangga" 592 2004 18
+3001 "Clean Code: A Handbook of Agile Software Craftsmanship" "Robert C. Martin" "Prentice Hall" 464 2008 25
+3002 "Design Patterns: Elements of Reusable Object-Oriented Software" "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides" "Addison-Wesley Professional" 416 1994 30
+3003 "The Pragmatic Programmer: Your Journey to Mastery" "Andrew Hunt, David Thomas" "Addison-Wesley Professional" 352 1999 20
+3004 "Code Complete: A Practical Handbook of Software Construction" "Steve McConnell" "Microsoft Press" 960 1993 18
+3005 "Domain-Driven Design: Tackling Complexity in the Heart of Software" "Eric Evans" "Addison-Wesley Professional" 560 2003 22
+3006 "Refactoring: Improving the Design of Existing Code" "Martin Fowler" "Addison-Wesley Professional" 455 1999 20
+3007 "The Mythical Man-Month: Essays on Software Engineering" "Frederick P. Brooks Jr." "Addison-Wesley Professional" 336 1975 15
+3008 "Structure and Interpretation of Computer Programs" "Harold Abelson, Gerald Jay Sussman, Julie Sussman" "The MIT Press" 657 1984 20
+3009 "Introduction to Algorithms" "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" "The MIT Press" 1312 1990 22
+3010 "The Art of Computer Programming" "Donald E. Knuth" "Addison-Wesley Professional" 3168 1968 30
+3011 "Cracking the Coding Interview: 189 Programming Questions and Solutions" "Gayle Laakmann McDowell" "CareerCup" 687 2011 25
+3012 "Clean Architecture: A Craftsman's Guide to Software Structure and Design" "Robert C. Martin" "Prentice Hall" 432 2017 28
+3013 "Head First Design Patterns: A Brain-Friendly Guide" "Eric Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra" "O'Reilly Media" 694 2004 20
+3014 "The Linux Programming Interface: A Linux and UNIX System Programming Handbook" "Michael Kerrisk" "No Starch Press" 1552 2010 22
+3015 "Programming Python: Powerful Object-Oriented Programming" "Mark Lutz" "O'Reilly Media" 1648 1996 20
+3016 "Learning Python" "Mark Lutz" "O'Reilly Media" 1648 1999 22
+3017 "Python Cookbook: Recipes for Mastering Python 3" "David Beazley, Brian K. Jones" "O'Reilly Media" 706 2013 18
+3018 "Effective Python: 90 Specific Ways to Write Better Python" "Brett Slatkin" "Addison-Wesley Professional" 480 2015 25
+3019 "Python Crash Course: A Hands-On, Project-Based Introduction to Programming" "Eric Matthes" "No Starch Press" 562 2015 20
+3020 "JavaScript: The Good Parts" "Douglas Crockford" "O'Reilly Media" 176 2008 15
+3021 "Eloquent JavaScript: A Modern Introduction to Programming" "Marijn Haverbeke" "No Starch Press" 472 2011 18
+3022 "You Don't Know JS: Scope & Closures" "Kyle Simpson" "O'Reilly Media" 98 2014 12
+3023 "Node.js Design Patterns" "Mario Casciaro" "Packt Publishing" 454 2014 20
+3024 "React Design Patterns and Best Practices" "Michele Bertoli" "Packt Publishing" 458 2017 18
+3025 "Learning React: A Hands-On Guide to Building Web Applications Using React and Redux" "Alex Banks, Eve Porcello" "O'Reilly Media" 350 2017 20
+3026 "Vue.js 2 Cookbook" "Andrea Passaglia" "Packt Publishing" 346 2017 19
+3027 "Mastering React" "Adam Horton, Ryan Vice" "Packt Publishing" 454 2016 21
+3028 "Mastering Node.js" "Sandro Pasquali" "Packt Publishing" 454 2017 20
+3029 "Beginning Node.js, Express & MongoDB Development" "Greg Lim" "Apress" 352 2019 22
+3030 "Fullstack React: The Complete Guide to ReactJS and Friends" "Anthony Accomazzo, Nate Murray, Ari Lerner" "Fullstack.io" 800 2017 23
+4001 "Matematika untuk Ilmu Komputer" "Rinaldi Munir" "Informatika" 450 2015 30
+4002 "Fisika Dasar" "Halliday, Resnick, Walker" "Erlangga" 900 2010 35
+4003 "Kimia Dasar" "Raymond Chang" "Erlangga" 800 2012 30
+4004 "Biologi Sel dan Molekuler" "Robertis dan Ambrose" "Erlangga" 700 2014 28
+4005 "Anatomi dan Fisiologi" "Tortora, Grabowski" "Erlangga" 650 2013 25
+4006 "Dasar-Dasar Biokimia" "Lenninger" "Erlangga" 600 2018 28
+4007 "Organisasi dan Arsitektur Komputer" "William Stallings" "Penerbit Andi" 550 2016 25
+4008 "Jaringan Komputer" "Andrew S. Tanenbaum" "Penerbit Andi" 700 2017 30
+4009 "Rekayasa Perangkat Lunak" "Ian Sommerville" "Penerbit Andi" 800 2019 35
+4010 "Sistem Basis Data" "Ramez Elmasri, Shamkant B. Navathe" "Penerbit Andi" 900 2014 32
+4011 "Dasar-Dasar Pemrograman" "Michael Sipser" "Erlangga" 600 2015 28
+4012 "Teori Graf" "Narasi, Lasmana" "Erlangga" 550 2016 25
+4013 "Algoritma dan Struktur Data" "Thomas H. Cormen" "Penerbit Andi" 800 2013 30
+4014 "Sistem Operasi" "Abraham Silberschatz" "Penerbit Andi" 750 2018 33
+4015 "Pemrograman Berorientasi Objek" "Yohanes Suyanto" "Erlangga" 600 2017 28
+4016 "Pengenalan Sistem Informasi" "Ralph Stair, George Reynolds" "Andi Offset" 500 2016 25
+4017 "Analisis dan Desain Sistem" "Kendall & Kendall" "Erlangga" 650 2014 30
+4018 "Pengantar Teknologi Informasi" "Bento Sitohang" "Erlangga" 550 2015 25
+4019 "Struktur Data" "William Ford, William Topp" "Penerbit Andi" 700 2012 28
+4020 "Kecerdasan Buatan" "Stuart Russell, Peter Norvig" "Penerbit Andi" 850 2019 35
+4021 "Big Data" "Nathan Marz, James Warren" "Erlangga" 800 2018 32
+4022 "Pemrograman Paralel" "Barry Wilkinson, Michael Allen" "Penerbit Andi" 750 2016 30
+4023 "Sistem Multimedia" "Tobias Kuhn" "Erlangga" 600 2017 28
+4024 "Teknologi Informasi dan Komunikasi" "Ratna Budiarti" "Erlangga" 550 2015 25
+4025 "Manajemen Proyek Teknologi Informasi" "Kathy Schwalbe" "Penerbit Andi" 700 2019 30
+4026 "Cyber Security" "Chuck Easttom" "Erlangga" 650 2018 28
+4027 "E-Commerce" "Kenneth C. Laudon, Carol Guercio Traver" "Andi Offset" 500 2017 25
+4028 "Mobile Computing" "Rachmad Hidayat, S.Kom" "Erlangga" 550 2016 28
+4029 "Pemrograman Web" "Achmad Solichin" "Penerbit Andi" 700 2015 30
+4030 "Cloud Computing" "Dan C. Marinescu" "Erlangga" 600 2014 28
+
