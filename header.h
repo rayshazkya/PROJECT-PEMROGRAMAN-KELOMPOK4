@@ -14,6 +14,13 @@ typedef struct buku {
     unsigned int jumlah_bukutersedia;
 } buku;
 
+// Definisi struktur untuk menyimpan data peminjaman buku
+typedef struct {
+    int id_user;
+    unsigned int id_buku;
+    char judul[100];
+} BukuDipinjam;
+
 void  pinjambuku(); 
 void listbukuuser();
 =======
@@ -24,10 +31,10 @@ void main_menu_admin ();
 void main_menu_user();
 void kembali_main_admin(char back);
 void kembali_main_user(char back);
+void pinjamBuku(Buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id);
+void kembalikanBuku(unsigned int id_buku);
+void showBukuTersedia(Buku *daftar_buku, int jumlah_buku);
 void showlistPeminjaman();
 int bacaDataBuku(Buku *daftar_buku);
-void pinjamBuku(buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id);
-void kembalikanBuku(unsigned int id);
-void showBukuTersedia(Buku *daftar_buku, int jumlah_buku);
 
 >>>>>>> f88f7e569198810ff4f22732544e564d41b7b040
