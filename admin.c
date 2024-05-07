@@ -6,7 +6,9 @@
 #define MAX_BUKU 100 // jumlah maksimal buku yang dapat di input
 
 // Fungsi untuk menyimpan data
-void simpanKeFile(struct Buku buku[], int jumlahBuku) {
+void simpanKeFile(){
+struct Buku buku[];
+int jumlahBuku; 
     FILE *file = fopen("databuku.txt", "w");
     if (file == NULL) { // Memeriksa apakah file berhasil dibuka
         printf("Gagal membuka file.\n");
