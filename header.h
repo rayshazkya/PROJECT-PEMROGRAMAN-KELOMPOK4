@@ -28,5 +28,6 @@ void showlistPeminjaman();
 int bacaDataBuku(Buku *daftar_buku);
 void pinjamBuku(buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id);
 void kembalikanBuku(unsigned int id);
+void showBukuTersedia(Buku *daftar_buku, int jumlah_buku);
 
 >>>>>>> f88f7e569198810ff4f22732544e564d41b7b040
