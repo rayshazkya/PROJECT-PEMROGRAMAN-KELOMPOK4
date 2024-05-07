@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "header.h"
 
 #define MAX_BOOKS 100
@@ -25,7 +23,7 @@ int main() {
 
         switch (pilihan) {
             case 1:
-                showAvailableBooks(daftar_buku, jumlah_buku);
+                showBukuTersedia(daftar_buku, jumlah_buku);
                 break;
             case 2:
                 printf("\nMasukkan ID User: ");
