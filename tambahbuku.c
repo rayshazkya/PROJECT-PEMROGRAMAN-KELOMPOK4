@@ -6,7 +6,9 @@
 #define MAX_BUKU 100 // jumlah maksimal buku yang dapat disimpan
 
 // Fungsi menambahkan buku baru ke dalam array buku
-void tambahBuku(struct Buku buku[], int *jumlahBuku) {
+void tambahBuku(){
+struct Buku buku[];
+int *jumlahBuku);
     if (*jumlahBuku < MAX_BUKU) { // array diperiksa apakah array buku belum penuh 
         // Meminta user untuk memasukkan data buku
         printf("Masukkan ID buku: ");
