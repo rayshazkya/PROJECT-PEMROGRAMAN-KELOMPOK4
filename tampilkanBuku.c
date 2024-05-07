@@ -6,7 +6,6 @@
 // Fungsi untuk menampilkan daftar buku yang tersedia
 void showBukuTersedia(Buku *daftar_buku, int jumlah_buku) {
     printf("Buku yang tersedia:\n");
-    printf("ID Buku\tJudul\t\tPenulis\t\tPenerbit\t\tJumlah Halaman\t\tTahun Terbit\t\tJumlah Tersedia\n");
     for (int i = 0; i < jumlah_buku; i++) {
         printf("ID Buku: %u\n", daftar_buku[i].id);
         printf("Judul Buku: %s\n", daftar_buku[i].judul);
