@@ -2,6 +2,17 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+typedef struct buku {
+    unsigned int id;
+    char judul[100]; 
+    char penulis[100];
+    char penerbit[100];
+    unsigned int halaman;
+    unsigned int tahun_terbit;
+    unsigned int jumlah_bukutersedia;
+} buku;
+
 void main_menu_admin ();
 char Login_user (  char username [] ,  char password[] );
 char Login_Admin (  char username [] ,  char password[] );
