@@ -24,3 +24,4 @@ void showBukuTersedia();
 void pinjamBuku();
 void showListPeminjaman();
 void kembalikanBuku();
+int bacaDataBuku(Buku *daftar_buku);
