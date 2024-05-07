@@ -63,7 +63,7 @@ void pinjamBuku(Buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id
 }
 
 // Fungsi untuk menampilkan daftar buku yang tersedia
-void showAvailableBooks(Buku *daftar_buku, int jumlah_buku) {
+void showBukuTersedia(Buku *daftar_buku, int jumlah_buku) {
     printf("Buku yang tersedia:\n");
     printf("ID Buku\tJudul\tPenulis\tPenerbit\tJumlah Halaman\tTahun Terbit\tJumlah Tersedia\n");
     for (int i = 0; i < jumlah_buku; i++) {
@@ -177,7 +177,7 @@ int main() {
 
         switch (pilihan) {
             case 1:
-                showAvailableBooks(daftar_buku, jumlah_buku);
+                showBukuTerseddia(daftar_buku, jumlah_buku);
                 break;
             case 2:
                 printf("\nMasukkan ID User: ");
