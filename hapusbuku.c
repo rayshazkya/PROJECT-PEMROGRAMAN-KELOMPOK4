@@ -4,7 +4,9 @@
 #include "header.h"
 
 // Fungsi menghapus buku berdasarkan ID
-void hapusBuku(struct Buku buku[], int *jumlahBuku, int id) {
+void hapusBuku(){
+struct Buku buku[];
+int *jumlahBuku, int id;
     int i, found = 0;
     //buku dicari dengan ID yang sesuai
     for (i = 0; i < *jumlahBuku; i++) {
