@@ -22,19 +22,54 @@ typedef struct {
     char judul[100];
 } BukuDipinjam;
 
+// Fungsi untuk membaca data buku dari file
+int bacaDataBuku(Buku *daftar_buku) {
+    FILE *file = fopen("databuku.txt", "r");
+    if (file == NULL) {
+        printf("Gagal membuka file databuku.txt\n");
+        exit(1);
+    }
+
+    int jumlah_buku = 0;
+    while (fscanf(file, "%u \"%99[^\"]\" \"%99[^\"]\" \"%99[^\"]\" %u %u %u\n", 
+                    &daftar_buku[jumlah_buku].id, 
+                    daftar_buku[jumlah_buku].judul, 
+                    daftar_buku[jumlah_buku].penulis, 
+                    daftar_buku[jumlah_buku].penerbit, 
+                    &daftar_buku[jumlah_buku].jumlah_halaman, 
+                    &daftar_buku[jumlah_buku].tahun_terbit, 
+                    &daftar_buku[jumlah_buku].jumlah_buku_tersedia) == 7) {
+        jumlah_buku++;
+    }
+    fclose(file);
+    return jumlah_buku;
+}
+
 // Fungsi untuk meminjam buku
-void pinjamBuku(Buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id) {
+void pinjamBuku() {
+    Buku daftar_buku[MAX_BOOKS];
+    int jumlah_buku = bacaDataBuku(daftar_buku);
+
+    int id_user;
+    unsigned int id_buku;
+
+    printf("\nMasukkan ID User: ");
+    scanf("%d", &id_user);
+
+    printf("Masukkan ID Buku yang ingin dipinjam: ");
+    scanf("%u", &id_buku);
+
     int k = -1;
 
     for (int i = 0; i < jumlah_buku; i++) {
-        if (daftar_buku[i].id == id) {
+        if (daftar_buku[i].id == id_buku) {
             k = i;
             break;
         }
     }
 
     if (k == -1) {
-        printf("Buku dengan ID %u tidak ditemukan.\n", id);
+        printf("Buku dengan ID %u tidak ditemukan.\n", id_buku);
         return;
     }
 
@@ -63,7 +98,10 @@ void pinjamBuku(Buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id
 }
 
 // Fungsi untuk menampilkan daftar buku yang tersedia
-void showBukuTersedia(Buku *daftar_buku, int jumlah_buku) {
+void showBukuTersedia() {
+    Buku daftar_buku[MAX_BOOKS];
+    int jumlah_buku = bacaDataBuku(daftar_buku);
+
     printf("Buku yang tersedia:\n");
     printf("ID Buku\tJudul\tPenulis\tPenerbit\tJumlah Halaman\tTahun Terbit\tJumlah Tersedia\n");
     for (int i = 0; i < jumlah_buku; i++) {
@@ -79,7 +117,7 @@ void showBukuTersedia(Buku *daftar_buku, int jumlah_buku) {
 }
 
 // Fungsi untuk menampilkan daftar peminjaman buku
-void showlistPeminjaman() {
+void showListPeminjaman() {
     FILE *file = fopen("listpeminjaman.txt", "r");
     if (file == NULL) {
         printf("Belum ada buku yang dipinjam.\n");
@@ -99,7 +137,12 @@ void showlistPeminjaman() {
 }
 
 // Fungsi untuk mengembalikan buku
-void kembalikanBuku(unsigned int id_buku) {
+void kembalikanBuku() {
+    unsigned int id_buku;
+
+    printf("\nMasukkan ID Buku yang ingin dikembalikan: ");
+    scanf("%u", &id_buku);
+
     FILE *fileInput = fopen("listpeminjaman.txt", "r");
     FILE *fileOutput = fopen("temp.txt", "w");
 
@@ -134,36 +177,8 @@ void kembalikanBuku(unsigned int id_buku) {
     }
 }
 
-// Fungsi untuk membaca data buku dari file
-int bacaDataBuku(Buku *daftar_buku) {
-    FILE *file = fopen("databuku.txt", "r");
-    if (file == NULL) {
-        printf("Gagal membuka file databuku.txt\n");
-        exit(1);
-    }
-
-    int jumlah_buku = 0;
-    while (fscanf(file, "%u \"%99[^\"]\" \"%99[^\"]\" \"%99[^\"]\" %u %u %u\n", 
-                    &daftar_buku[jumlah_buku].id, 
-                    daftar_buku[jumlah_buku].judul, 
-                    daftar_buku[jumlah_buku].penulis, 
-                    daftar_buku[jumlah_buku].penerbit, 
-                    &daftar_buku[jumlah_buku].jumlah_halaman, 
-                    &daftar_buku[jumlah_buku].tahun_terbit, 
-                    &daftar_buku[jumlah_buku].jumlah_buku_tersedia) == 7) {
-        jumlah_buku++;
-    }
-    fclose(file);
-    return jumlah_buku;
-}
-
 int main() {
-    Buku daftar_buku[MAX_BOOKS];
-    int jumlah_buku = bacaDataBuku(daftar_buku);
-
     int pilihan;
-    int id_user;
-    unsigned int id_buku;
 
     do {
         printf("\n=== MENU ===\n");
@@ -177,25 +192,16 @@ int main() {
 
         switch (pilihan) {
             case 1:
-                showBukuTerseddia(daftar_buku, jumlah_buku);
+                showBukuTersedia();
                 break;
             case 2:
-                printf("\nMasukkan ID User: ");
-                scanf("%d", &id_user);
-
-                printf("Masukkan ID Buku yang ingin dipinjam: ");
-                scanf("%u", &id_buku);
-
-                pinjamBuku(daftar_buku, jumlah_buku, id_user, id_buku);
+                pinjamBuku();
                 break;
             case 3:
-                showlistPeminjaman();
+                showListPeminjaman();
                 break;
             case 4:
-                printf("\nMasukkan ID Buku yang ingin dikembalikan: ");
-                scanf("%u", &id_buku);
-
-                kembalikanBuku(id_buku);
+                kembalikanBuku();
                 break;
             case 0:
                 printf("Terima kasih!\n");
