@@ -1,33 +1,33 @@
 #include "header.h"
-void kembali_main_admin(char back);
-void kembali_main_user(char back);
+void kembali_main_admin();
+void kembali_main_user();
 
 void main_menu_admin (){
     int opt;
     printf("--MAIN MENU ADMIN--\n");
-    printf("Pilih opsi aksi:\n1.Menambah\n2.Menghapus\n3.Mengedit\n aksi: ");
+    printf("Pilih opsi aksi:\n1.Menambah\n2.Menghapus\n3.Mengedit\n aksi: "); 
     scanf("%i",&opt);
-
+    
     switch (opt)
     {
         case 1 : 
         printf("\n");
-        admin_Akses_buku();
-        printf("kembali ke menu utama (y) atau keluar (n) [y/n]?");
-        char back;
-        scanf("%c",&back);
-        getchar();
-        kembali_main_admin(back);
+        admin_Akses_buku_tambah();
+        kembali_main_admin();
         break;
         
 
         case 2: 
-        printf("opsi2");
+        printf("\n");
+        admin_Akses_buku_hapus();
+        kembali_main_admin();
         break;
     }
 
 
 }
+
+//user belom rampung ,edit lagi!
 
 void main_menu_user (){
     int opt;
@@ -39,12 +39,8 @@ void main_menu_user (){
     {
         case 1 : 
         printf("\n");
-        admin_Akses_buku();
-        printf("kembali [y/n]?");
-        char back;
-        scanf("%c",&back);
-        getchar();
-        kembali_main_user(back);
+        
+        kembali_main_user();
 
         break;
 
@@ -56,7 +52,13 @@ void main_menu_user (){
 
 }
 
-void kembali_main_admin(char back){
+
+
+void kembali_main_admin(){
+        printf("kembali ke menu utama (y) atau keluar (n) [y/n]?");
+        char back;
+        scanf("%c",&back);
+        getchar();
     if (back == 'y' || back == 'Y'){
         main_menu_admin ();
     }
@@ -65,7 +67,11 @@ void kembali_main_admin(char back){
     }
 }
 
-void kembali_main_user(char back){
+void kembali_main_user(){
+        printf("kembali ke menu utama (y) atau keluar (n) [y/n]?");
+        char back;
+        scanf("%c",&back);
+        getchar();
     if (back == 'y' || back == 'Y'){
         main_menu_user ();
     }
@@ -73,5 +79,3 @@ void kembali_main_user(char back){
         EXIT_SUCCESS;
     }
 }
-
-
