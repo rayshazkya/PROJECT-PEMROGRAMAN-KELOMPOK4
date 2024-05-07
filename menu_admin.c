@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "header.h"
 
-// Fungsi untuk menampilkan menu dan meminta input dari pengguna
+// Fungsi untuk menampilkan menu dan meminta input dari user
 int tampilkanMenu() {
     int choice;
 
