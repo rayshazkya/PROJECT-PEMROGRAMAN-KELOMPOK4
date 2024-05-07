@@ -3,12 +3,12 @@
 #include <string.h>
 #include "header.h"
 
-#define MAX_BUKU 100 // Maksimum jumlah buku yang dapat disimpan
+#define MAX_BUKU 100 // jumlah maksimal buku yang dapat disimpan
 
-// Fungsi untuk menambahkan buku baru ke dalam array buku
+// Fungsi menambahkan buku baru ke dalam array buku
 void tambahBuku(struct Buku buku[], int *jumlahBuku) {
-    if (*jumlahBuku < MAX_BUKU) { // Memeriksa apakah array buku belum penuh
-        // Meminta pengguna untuk memasukkan data buku
+    if (*jumlahBuku < MAX_BUKU) { // array diperiksa apakah array buku belum penuh 
+        // Meminta user untuk memasukkan data buku
         printf("Masukkan ID buku: ");
         scanf("%d", &buku[*jumlahBuku].id);
         getchar();
