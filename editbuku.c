@@ -4,7 +4,9 @@
 #include "header.h"
 
 // Fungsi mengedit data buku berdasarkan ID
-void editBuku(struct Buku buku[], int *jumlahBuku, int id) {
+void editBuku(){
+struct Buku buku[];
+int *jumlahBuku, int id;
     int i, found = 0;
     // Mencari buku dengan ID yang sesuai
     for (i = 0; i < *jumlahBuku; i++) {
