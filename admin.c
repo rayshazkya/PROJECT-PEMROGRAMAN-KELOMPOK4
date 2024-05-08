@@ -40,8 +40,8 @@ int main() {
 
     // Menu utama
      do {
-        choice = tampilkanMenu(); // Memanggil fungsi menu
-        switch (choice) {
+        pilihan = tampilkanMenu(); // Memanggil fungsi menu
+        switch (pilihan) {
             case 1:
                 tambahBuku(buku, &jumlahBuku);
                 break;
@@ -62,7 +62,7 @@ int main() {
             default:
                 printf("Pilihan tidak valid. Silakan pilih kembali.\n");
         }
-    } while (choice != 4);
+    } while (pilihan != 4);
 
     return 0;
 }
