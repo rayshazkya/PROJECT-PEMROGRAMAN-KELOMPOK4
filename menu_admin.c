@@ -3,7 +3,7 @@
 
 // Fungsi untuk menampilkan menu dan meminta input dari user
 int tampilkanMenu() {
-    int choice;
+    int pilihan;
 
     printf("\nPilih operasi yang ingin dilakukan:\n");
     printf("1. Tambah buku\n");
@@ -11,7 +11,7 @@ int tampilkanMenu() {
     printf("3. Edit buku\n");
     printf("4. Keluar\n");
     printf("Pilih: ");
-    scanf("%d", &choice);
-    return choice;
+    scanf("%d", &pilihan);
+    return pilihan;
 }
 
