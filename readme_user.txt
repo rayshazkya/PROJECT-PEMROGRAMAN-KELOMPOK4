@@ -16,5 +16,7 @@ main.c: Berisi fungsi main dan fungsi untuk menghubungkan semua file.
 tampilkanBuku.c: Berisi fungsi untuk menampilkan daftar buku yang tersedia.
 pinjamBuku.c: Berisi fungsi untuk meminjam buku.
 kembalikanBuku.c: Berisi fungsi untuk mengembalikan buku.
+fungsilistbuku.c : Berisi Fungsi yang menampilkan keseluruhan buku yang tersedia di perpustakaan.
+
 
 Pastikan file databuku.txt dan listpeminjaman.txt tersedia di direktori yang sama dengan file program.
