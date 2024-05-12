@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+
 #include "header.h"
 
 
@@ -38,6 +36,7 @@ void pinjamBuku(Buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id
         }
         fprintf(file, "%d,%u,%s\n", buku_dipinjam.id_user, buku_dipinjam.id_buku, buku_dipinjam.judul);
         fclose(file);
+        main_menu_user();
 
     } else {
         printf("Maaf, buku '%s' sedang tidak tersedia.\n", daftar_buku[k].judul);
