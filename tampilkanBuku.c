@@ -1,21 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "header.h"
 
-// Fungsi untuk menampilkan daftar buku yang tersedia
-void showBukuTersedia(Buku *daftar_buku, int jumlah_buku) {
-    printf("Buku yang tersedia:\n");
-    for (int i = 0; i < jumlah_buku; i++) {
-        printf("ID Buku: %u\n", daftar_buku[i].id);
-        printf("Judul Buku: %s\n", daftar_buku[i].judul);
-        printf("Penulis: %s\n", daftar_buku[i].penulis);
-        printf("Penerbit: %s\n", daftar_buku[i].penerbit);
-        printf("Jumlah Halaman: %u\n", daftar_buku[i].jumlah_halaman);
-        printf("Tahun Terbit: %u\n", daftar_buku[i].tahun_terbit);
-        printf("Jumlah Tersedia: %u\n", daftar_buku[i].jumlah_buku_tersedia);
-        printf("\n");
+#define MAX_LINE_LENGTH 1024 // Define a named constant for the maximum line length
+
+//fungsi menampilkan buku
+void showBukuTersedia() {
+    Buku book[MAX];
+    FILE *file = fopen("databuku.txt", "r");
+    if (file == NULL) {
+        fprintf(stderr, "Gagal membuka file databuku.txt\n");
+        return;
     }
+
+    int i = 0;
+    while (fscanf(file, "%u \"%[^\"]\" \"%[^\"]\" \"%[^\"]\" %u %u %u", //scan data dari file databuku.txt
+                  &book[i].id, book[i].judul, book[i].penulis, book[i].penerbit,
+                  &book[i].jumlah_halaman, &book[i].tahun_terbit, &book[i].jumlah_buku_tersedia) == 7) {
+        printf("Buku %d:\n", i);
+        printf("%u %s %s %s %u %u %u\n", book[i].id, book[i].judul, book[i].penulis, book[i].penerbit, book[i].jumlah_halaman, book[i].tahun_terbit, book[i].jumlah_buku_tersedia);
+        i++;
+    }
+
+    fclose(file);
+    main_menu_user();
 }
 
 
@@ -40,4 +48,5 @@ void showlistPeminjaman() {
     }
 
     fclose(file);
+    main_menu_user();
 }
