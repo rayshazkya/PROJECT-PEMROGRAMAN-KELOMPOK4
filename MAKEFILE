@@ -1,0 +1,2 @@
+gcc header.h login.c adminTambahHapus.c editbuku.c   kembalikanBuku.c tampilkanBuku.c pinjamBuku.c main_menu.c main.c -o run
+ 
