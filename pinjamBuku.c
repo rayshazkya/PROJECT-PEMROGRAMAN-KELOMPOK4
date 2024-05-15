@@ -9,7 +9,7 @@ int bacaDataBuku(Buku *daftar_buku) {
         exit(1);
     }
 
-    int jumlah_buku = 0;
+    int jumlah_buku = 0;//hitung jumlah buku 
     while (fscanf(file, "%u \"%99[^\"]\" \"%99[^\"]\" \"%99[^\"]\" %u %u %u\n", 
                     &daftar_buku[jumlah_buku].id, 
                     daftar_buku[jumlah_buku].judul, 
@@ -31,7 +31,7 @@ void pinjamBuku(Buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id
 
     for (int i = 0; i < jumlah_buku; i++) {
         if (daftar_buku[i].id == id) {
-            k = i;
+            k = i; //membooking index
             break;
         }
     }
