@@ -2,9 +2,8 @@
 #include <stdlib.h>
 #include "header.h"
 
-#define MAX_LINE_LENGTH 1024 // Define a named constant for the maximum line length
+#define MAX_LINE_LENGTH 1024
 
-//fungsi menampilkan buku
 void showBukuTersedia() {
     Buku book[MAX];
     FILE *file = fopen("databuku.txt", "r");
