@@ -75,10 +75,6 @@ void editBuku() {
     }
    
 
-    printf("BERHASIL!\n");
+    printf("Buku berhasil diedit!\n");
     main_menu_admin();
 }
-
-   
-
-
