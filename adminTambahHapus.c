@@ -37,38 +37,38 @@ char admin_Akses_buku_tambah ( ){
 }
 
 char admin_Akses_buku_hapus() {
-    FILE *original_file = fopen("databuku.txt", "r");
-    if (original_file == NULL) {
+    FILE *fileAsli = fopen("databuku.txt", "r");
+    if (fileAsli == NULL) {
         printf("Gagal membuka file!\n");
         return 1;
     }
 
-    FILE *temp_file = fopen("temp_file.txt", "w");
-    if (temp_file == NULL) {
-        printf("Error creating temporary file!\n");
-        fclose(original_file);
+    FILE *fileSementara = fopen("temp_file.txt", "w");
+    if (fileSementara == NULL) {
+        printf("Gagal membuat file sementara!\n");
+        fclose(fileAsli);
         return 1;
     }
 
-    int delete_line_number; // mengganti baris
+    int hapusNomor; // mengganti baris
     printf("masukkan kode buku: ");
     scanf("%d",&hapusNomor);
-    char line[1024];
-    int line_number = 1000;
+    char baris[1024];
+    int kode = 1000;
     //semua data dari databuku.txt di copy kecuali data yg id nya sama dengan id yang ingin di hapus
-    while (fgets(line, 1024, original_file) != NULL) {
-        line_number++;
-        if (line_number != hapusNomor) {
-            fprintf(temp_file, "%s", line);
+    while (fgets(baris, 1024, fileAsli) != NULL) {
+        kode++;
+        if (kode != hapusNomor) {
+            fprintf(fileSementara, "%s", baris);
         }
     }
 
-    fclose(original_file);
-    fclose(temp_file);
+    fclose(fileAsli);
+    fclose(fileSementara);
 
     
     if (remove("databuku.txt") != 0) {
-        printf("Gagal menghapus original file!\n");
+        printf("Gagal menghapus file asli!\n");
         return 1;
     }
     if (rename("temp_file.txt", "databuku.txt") != 0) {
@@ -76,7 +76,7 @@ char admin_Akses_buku_hapus() {
         return 1;
     }
 
-    printf("Line deleted successfully!\n");
+    printf("Buku berhasil di hapus!\n");
     main_menu_admin();
 }
 
