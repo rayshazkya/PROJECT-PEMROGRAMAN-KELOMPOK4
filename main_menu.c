@@ -72,7 +72,7 @@ void main_menu_user () {
                 scanf("%u", &id_buku);
 
                 pinjamBuku(daftar_buku, jumlah_buku, id_user, id_buku);
-                kembali_main_user();
+                
                 break;
             case 3:
                 showlistPeminjaman();
@@ -127,5 +127,3 @@ void kembali_main_user(){
         EXIT_SUCCESS;
     }
 }
-
-
