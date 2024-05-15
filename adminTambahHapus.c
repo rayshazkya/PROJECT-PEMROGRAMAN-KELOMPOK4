@@ -39,7 +39,7 @@ char admin_Akses_buku_tambah ( ){
 char admin_Akses_buku_hapus() {
     FILE *original_file = fopen("databuku.txt", "r");
     if (original_file == NULL) {
-        printf("Error opening file!\n");
+        printf("Gagal membuka file!\n");
         return 1;
     }
 
@@ -52,13 +52,13 @@ char admin_Akses_buku_hapus() {
 
     int delete_line_number; // mengganti baris
     printf("masukkan kode buku: ");
-    scanf("%d",&delete_line_number);
+    scanf("%d",&hapusNomor);
     char line[1024];
     int line_number = 1000;
     //semua data dari databuku.txt di copy kecuali data yg id nya sama dengan id yang ingin di hapus
     while (fgets(line, 1024, original_file) != NULL) {
         line_number++;
-        if (line_number != delete_line_number) {
+        if (line_number != hapusNomor) {
             fprintf(temp_file, "%s", line);
         }
     }
@@ -68,11 +68,11 @@ char admin_Akses_buku_hapus() {
 
     
     if (remove("databuku.txt") != 0) {
-        printf("Error deleting original file!\n");
+        printf("Gagal menghapus original file!\n");
         return 1;
     }
     if (rename("temp_file.txt", "databuku.txt") != 0) {
-        printf("Error renaming temporary file!\n");
+        printf("Gagal mengubah nama file sementara!\n");
         return 1;
     }
 
