@@ -39,6 +39,7 @@ void showBukuTersedia( );
 void showlistPeminjaman();
 
 // Fungsi untuk membaca data buku dari file
+int bacaDataBuku(Buku *daftar_buku);
 
 
 //admin 
