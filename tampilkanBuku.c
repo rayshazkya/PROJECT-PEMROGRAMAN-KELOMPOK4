@@ -12,13 +12,13 @@ void showBukuTersedia() {
         fprintf(stderr, "Gagal membuka file databuku.txt\n");
         return;
     }
-
+    printf("'id buku' 'judul buku' 'penulis' 'penerbit' 'jumlah halaman' 'tahun terbit' 'jumlah buku tersedia'");
     int i = 0;
     while (fscanf(file, "%u \"%[^\"]\" \"%[^\"]\" \"%[^\"]\" %u %u %u", //scan data dari file databuku.txt
                   &book[i].id, book[i].judul, book[i].penulis, book[i].penerbit,
                   &book[i].jumlah_halaman, &book[i].tahun_terbit, &book[i].jumlah_buku_tersedia) == 7) {
-        printf("Buku %d:\n", i);
-        printf("%u %s %s %s %u %u %u\n", book[i].id, book[i].judul, book[i].penulis, book[i].penerbit, book[i].jumlah_halaman, book[i].tahun_terbit, book[i].jumlah_buku_tersedia);
+        printf("Buku %d:\n", i+1);
+        printf("'%u' '%s' '%s' '%s' '%u' '%u' '%u'\n", book[i].id, book[i].judul, book[i].penulis, book[i].penerbit, book[i].jumlah_halaman, book[i].tahun_terbit, book[i].jumlah_buku_tersedia);
         i++;
     }
 
