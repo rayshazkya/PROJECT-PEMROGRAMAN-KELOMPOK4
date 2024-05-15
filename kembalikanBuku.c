@@ -21,23 +21,32 @@ void kembalikanBuku(unsigned int id_buku, Buku *daftar_buku, int jumlah_buku) {
     char judul[100];
    
     // Inisialisasi variabel untuk menandai apakah buku telah ditemukan
-    int bukuDitemukan = 0;
-    int i = 0;
-
+    int bukuDitemukan = 0; 
     // Baca baris-baris dari file listpeminjaman.txt
-    while (fscanf(fileInput, "%d,%u,%99[^\n]", &id_user, &id, judul) == 3) {
-        // Periksa apakah ID buku pada baris saat ini sesuai dengan ID buku yang ingin dikembalikan
-        if (id == id_buku) {
-            // Jika sesuai, tandai buku telah ditemukan dan tambahkan kembali jumlah buku yang tersedia
-            printf("Buku '%s' telah dikembalikan.\n", judul);
-            bukuDitemukan = 1;
-            daftar_buku[i].jumlah_buku_tersedia++;
-        } else {
-            // Jika tidak sesuai, tulis baris tersebut ke file output (temp.txt)
-            fprintf(fileOutput, "%d,%u,%s\n", id_user, id, judul);
+// Baca baris-baris dari file listpeminjaman.txt
+while (fscanf(fileInput, "%d,%u,%99[^\n]", &id_user, &id, judul) == 3) {
+    // Cari indeks buku dengan ID yang sesuai
+    int index_buku = -1;
+    for (int j = 0; j < jumlah_buku; j++) {
+        if (daftar_buku[j].id == id) {
+            index_buku = j;
+            break;
         }
-        i++;
     }
+
+    // Periksa apakah buku ditemukan
+    if (index_buku != -1) {
+        // Jika sesuai, tandai buku telah ditemukan dan tambahkan kembali jumlah buku yang tersedia
+        printf("Buku '%s' telah dikembalikan.\n", judul);
+        bukuDitemukan = 1;
+        daftar_buku[index_buku].jumlah_buku_tersedia++;
+    } else {
+        // Jika tidak sesuai, tulis baris tersebut ke file output (temp.txt)
+        fprintf(fileOutput, "%d,%u,%s\n", id_user, id, judul);
+    }
+}
+
+
 
     // Tutup file input dan output
     fclose(fileInput);
@@ -71,5 +80,5 @@ void kembalikanBuku(unsigned int id_buku, Buku *daftar_buku, int jumlah_buku) {
     }
 
     // Kembali ke menu utama pengguna setelah proses selesai
-    kembali_main_user();
+    main_menu_user();
 }
