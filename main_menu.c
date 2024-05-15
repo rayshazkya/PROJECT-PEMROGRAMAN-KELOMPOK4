@@ -65,6 +65,7 @@ void main_menu_user () {
                 
                 break;
             case 2:
+                printf("Id user harus dengan angka!");
                 printf("\nMasukkan ID User: ");
                 scanf("%d", &id_user);
 
