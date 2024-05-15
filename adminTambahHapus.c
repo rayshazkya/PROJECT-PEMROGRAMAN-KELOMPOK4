@@ -49,7 +49,7 @@ char admin_Akses_buku_hapus() {
     FILE *fileSementara = fopen("temp_file.txt", "w");
     if (fileSementara == NULL) {
         printf("Gagal membuat file sementara!\n");
-        fclose(fileAsli);
+        fclose(fileSementara);
         return 1;
     }
 
@@ -66,7 +66,7 @@ char admin_Akses_buku_hapus() {
         }
     }
 
-    fclose(FileAsli);
+    fclose(fileAsli);
     fclose(fileSementara);
 
     

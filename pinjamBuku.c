@@ -1,4 +1,3 @@
-
 #include "header.h"
 
 // Fungsi untuk membaca data buku dari file
@@ -26,12 +25,14 @@ int bacaDataBuku(Buku *daftar_buku) {
 }
 
 // Fungsi untuk meminjam buku
+
+
 void pinjamBuku(Buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id) {
     int k = -1;
 
     for (int i = 0; i < jumlah_buku; i++) {
         if (daftar_buku[i].id == id) {
-            k = i; //membooking index
+            k = i;//membooking index
             break;
         }
     }
@@ -52,13 +53,28 @@ void pinjamBuku(Buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id
         strcpy(buku_dipinjam.judul, daftar_buku[k].judul);
 
         // Tulis data peminjaman ke file listpeminjaman.txt
-        FILE *file = fopen("listpeminjaman.txt", "a");
-        if (file == NULL) {
+        FILE *file_peminjaman = fopen("listpeminjaman.txt", "a");
+        if (file_peminjaman == NULL) {
             printf("Gagal membuka file untuk mencatat peminjaman.\n");
             return;
         }
-        fprintf(file, "%d,%u,%s\n", buku_dipinjam.id_user, buku_dipinjam.id_buku, buku_dipinjam.judul);
-        fclose(file);
+        fprintf(file_peminjaman, "user dengan id :%d| meminjam buku %u dengan judul %s\n", buku_dipinjam.id_user, buku_dipinjam.id_buku, buku_dipinjam.judul);
+        fclose(file_peminjaman);
+
+        // Update the availability of books in databuku.txt
+        FILE *file_buku = fopen("databuku.txt", "w+");
+        if (file_buku == NULL) {
+            printf("Gagal membuka file databuku.txt\n");
+            return;
+        }
+        for (int i = 0; i < jumlah_buku; i++) {
+            fprintf(file_buku, "%u \"%s\" \"%s\" \"%s\" %u %u %u\n",
+                    daftar_buku[i].id, daftar_buku[i].judul, daftar_buku[i].penulis,
+                    daftar_buku[i].penerbit, daftar_buku[i].jumlah_halaman,
+                    daftar_buku[i].tahun_terbit, daftar_buku[i].jumlah_buku_tersedia);
+        }
+        fclose(file_buku);
+
         main_menu_user();
 
     } else {
