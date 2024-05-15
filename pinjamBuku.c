@@ -1,4 +1,3 @@
-
 #include "header.h"
 
 // Fungsi untuk membaca data buku dari file
@@ -27,7 +26,7 @@ int bacaDataBuku(Buku *daftar_buku) {
 }
 
 void pinjamBuku(Buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id) {
-    int k = -1;
+    int k = -1; //menulis kembali ke file baru
     FILE *files = fopen("databukusemntr.txt", "w");
 
     // Cari buku berdasarkan ID
@@ -42,10 +41,9 @@ void pinjamBuku(Buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id
         printf("Buku dengan ID %u tidak ditemukan.\n", id);
         return;
     }
-
     if (daftar_buku[k].jumlah_buku_tersedia > 0) {
         for(int i =0; i < jumlah_buku; i++){
-        daftar_buku[k].jumlah_buku_tersedia--;
+        daftar_buku[k].jumlah_buku_tersedia--; //mengurangi file
         fprintf(files,"%u \"%s %s %s %u %u %u\n", daftar_buku[i].id, 
                     daftar_buku[i].judul, 
                     daftar_buku[i].penulis, 
