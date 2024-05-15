@@ -76,7 +76,7 @@ char admin_Akses_buku_hapus() {
         return 1;
     }
 
-    printf("buku berhasil di hapus!\n");
+    printf("Buku berhasil di hapus!\n");
     main_menu_admin();
 }
 
