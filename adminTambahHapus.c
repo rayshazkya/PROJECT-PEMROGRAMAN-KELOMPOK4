@@ -29,8 +29,11 @@ char admin_Akses_buku_tambah ( ){
     getchar();
     printf("\njumlah buku tersedia: ");
     scanf("%u",&buku[i].jumlah_buku_tersedia);
+    
     fprintf(buku_akses, "%u %s %s %s %u %u, %u", buku[i].id , buku[i].judul,buku[i].penulis,buku[i].penerbit,buku[i].jumlah_halaman,buku[i].tahun_terbit,buku[i].jumlah_buku_tersedia);
-    fprintf(buku_akses , "\n"); }
+    fprintf(buku_akses , "\n"); 
+    printf("Buku telah ditambahkan!");
+    }
 
     fclose(buku_akses);
     main_menu_admin();
@@ -79,4 +82,3 @@ char admin_Akses_buku_hapus() {
     printf("Buku berhasil di hapus!\n");
     main_menu_admin();
 }
-
