@@ -37,4 +37,5 @@ void kembalikanBuku(unsigned int id_buku) {
     if (!bukuDitemukan) {
         printf("Buku dengan ID %u tidak ditemukan dalam daftar peminjaman.\n", id_buku);
     }
+    kembali_main_user();
 }
