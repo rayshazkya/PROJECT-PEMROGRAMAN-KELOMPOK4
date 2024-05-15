@@ -46,7 +46,7 @@ void main_menu_user () {
     int pilihan;
     int id_user;
     unsigned int id_buku;
-    int jumlah_buku;
+    int jumlah_buku = bacaDataBuku(daftar_buku);
     
         printf("\n--MENU USER--\n");
         printf("1. Lihat Buku Tersedia\n");
