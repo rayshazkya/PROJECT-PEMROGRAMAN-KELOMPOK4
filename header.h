@@ -29,7 +29,7 @@ typedef struct {
 void pinjamBuku(Buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id);
 
 // Fungsi untuk mengembalikan buku
-void kembalikanBuku(unsigned int id_buku);
+void kembalikanBuku(unsigned int id_buku, Buku *daftar_buku, int jumlah_buku);
 
 // Fungsi untuk menampilkan daftar buku yang tersedia
 void showBukuTersedia( );

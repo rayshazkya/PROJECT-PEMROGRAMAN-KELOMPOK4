@@ -82,7 +82,7 @@ void main_menu_user () {
             case 4:
                 printf("\nMasukkan ID Buku yang ingin dikembalikan: ");
                 scanf("%u", &id_buku);
-                kembalikanBuku(id_buku);
+                kembalikanBuku(id_buku, daftar_buku, jumlah_buku);
                 
                 break;
             case 0:
