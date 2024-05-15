@@ -1,6 +1,29 @@
 
 #include "header.h"
 
+// Fungsi untuk membaca data buku dari file
+int bacaDataBuku(Buku *daftar_buku) {
+    FILE *file = fopen("databuku.txt", "r");
+    if (file == NULL) {
+        printf("Gagal membuka file databuku.txt\n");
+        exit(1);
+    }
+
+    int jumlah_buku = 0;
+    while (fscanf(file, "%u \"%99[^\"]\" \"%99[^\"]\" \"%99[^\"]\" %u %u %u\n", 
+                    &daftar_buku[jumlah_buku].id, 
+                    daftar_buku[jumlah_buku].judul, 
+                    daftar_buku[jumlah_buku].penulis, 
+                    daftar_buku[jumlah_buku].penerbit, 
+                    &daftar_buku[jumlah_buku].jumlah_halaman, 
+                    &daftar_buku[jumlah_buku].tahun_terbit, 
+                    &daftar_buku[jumlah_buku].jumlah_buku_tersedia) == 7) {
+        jumlah_buku++;
+    }
+
+    fclose(file);
+    return jumlah_buku;
+}
 
 // Fungsi untuk meminjam buku
 void pinjamBuku(Buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id) {
