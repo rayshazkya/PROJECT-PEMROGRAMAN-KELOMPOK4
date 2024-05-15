@@ -58,7 +58,7 @@ void pinjamBuku(Buku *daftar_buku, int jumlah_buku, int id_user, unsigned int id
             printf("Gagal membuka file untuk mencatat peminjaman.\n");
             return;
         }
-        fprintf(file_peminjaman, "user dengan id :%d| meminjam buku %u dengan judul %s\n", buku_dipinjam.id_user, buku_dipinjam.id_buku, buku_dipinjam.judul);
+        fprintf(file_peminjaman, "%d,%u,%s\n", buku_dipinjam.id_user, buku_dipinjam.id_buku, buku_dipinjam.judul);
         fclose(file_peminjaman);
 
         // Update the availability of books in databuku.txt
