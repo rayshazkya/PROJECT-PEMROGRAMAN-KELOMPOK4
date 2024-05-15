@@ -6,7 +6,7 @@ void editBuku() {
     FILE *file = fopen("databuku.txt", "r");
     FILE *temp = fopen("tempfile.txt", "w");
     if (file == NULL || temp== NULL){
-        printf("Eror Mebuka file!");
+        printf("Gagal membuka file!");
         exit (EXIT_FAILURE);
     }
     
@@ -20,12 +20,12 @@ void editBuku() {
     scanf("%d", &edit);
     
 
-    char line[1024];
+    char baris[1024];
     
-    while (fgets(line, 1024, file) != NULL) {
+    while (fgets(baris, 1024, file) != NULL) {
         id++;
         if (id != edit) {
-            fprintf(temp, "%s", line); //jika id tidak sama maka akan di print ke temp
+            fprintf(temp, "%s", baris); //jika id tidak sama maka akan di print ke temp
         }
         
         i++; //jika id sama , maka program memninta user memasukkan data buku 
@@ -65,17 +65,17 @@ void editBuku() {
     // databuku yang lama di hapus , kemudian di rename ,jdi tempfile= databuku baru
 
    if (remove("databuku.txt") != 0) {
-        printf("Error deleting original file!\n");
+        printf("Gagal menghapus file asli!\n");
         exit (EXIT_FAILURE);
     }
 
     if (rename("tempfile.txt", "databuku.txt") != 0) {
-        printf("Error renaming temporary file!\n");
+        printf("Gagal mengubah nama file sementara!\n");
         exit (EXIT_FAILURE);
     }
    
 
-    printf("BERHASIL!\n");
+    printf("Data buku telah di edit!\n");
     main_menu_admin();
 }
 
